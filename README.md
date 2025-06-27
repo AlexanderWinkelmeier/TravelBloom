@@ -2,7 +2,7 @@
 
 A JavaScript learning project from the IBM JavaScript Programming Essentials course on [Coursera](https://www.coursera.org/learn/javascript-programming-essentials/). This project combines HTML, CSS, and JavaScript to build a simple travel recommendation tool. Users can search for various travel destinations such as beaches, temples, and countries, and receive dynamically relevant results.
 
-[![View Deployed Site](https://img.shields.io/badge/View-Site-blue?style=for-the-badge)](https://olanrewajufarooq.github.io/travelRecommendation/)
+[![View Deployed Site](https://img.shields.io/badge/View-Site-blue?style=for-the-badge)](https://alexanderwinkelmeier.github.io/TravelBloom/)
 
 ## 🛠️ Tools & Technologies Learned
 
