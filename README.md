@@ -19,7 +19,7 @@ A JavaScript learning project from the IBM JavaScript Programming Essentials cou
 ### JavaScript
 - **Dynamic Event Handling**: Event listeners for user interactions (clicks, keypress events)
 - **Fetch API**: Retrieving and processing data from local JSON files
-- **Search Functionality**: Implementation of search logic for various keywords like "country", "beach", "temple"
+- **Search Functionality**: Implementation of search logic for various keywords like "country", "city", "beach", "temple"
 - **Regular Expressions**: Recognition of search term variations (plurals, partial words)
 
 ## ✨ Functions
