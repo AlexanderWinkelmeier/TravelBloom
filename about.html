@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us - Travel Bloom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('images/background.jpg') no-repeat center center;
+            background-size: cover;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            background: rgba(255,255,255,0.3);
+            padding: 32px 40px;
+            border-radius: 10px;
+            box-shadow: none;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .team {
+            margin-top: 32px;
+        }
+        .member {
+            margin: 18px 0;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .member:last-child {
+            border-bottom: none;
+        }
+        .role {
+            color: #fff;
+            font-weight: bold;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            display: block;
+            filter: brightness(0) invert(1);
+        }
+        .nav-company {
+          color: #fff;
+    font-style: italic;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    margin-left: 10px;
+}
+        .side-social-icons {
+            position: fixed;
+            top: 70vh;
+            left: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            z-index: 1000;
+        }
+        .side-social-icons a {
+            color: #fff;
+            font-size: 2.1em;
+            transition: color 0.2s;
+            text-decoration: none;
+        }
+        .side-social-icons a:hover {
+            color: #4da6ff;
+        }
+        
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <img src="images/airplane.png" alt="Travel Bloom Logo" class="logo" />
+      <span class="nav-company">TravelBloom</span>
+    </div>
+    <div class="nav-center">
+      <a href="home.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="nav-right">
+      <form class="search-form">
+        <span class="search-icon"><i class="fas fa-search"></i></span>
+        <input type="text" placeholder="Enter a destination or a keyword" name="search" />
+        <button type="submit">Search</button>
+        <button type="reset">Reset</button>
+      </form>
+    </div>
+  </nav>
+  <div class="side-social-icons">
+      <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
+    <div class="container">
+        <h1>About TravelBloom</h1>
+        <p>
+            Travel Bloom is dedicated to helping travelers discover the best destinations around the globe. Our mission is to inspire and guide you to your next unforgettable adventure, whether you seek relaxation, culture, or excitement.
+        </p>
+        <h2>Our Team</h2>
+        <div class="team">
+            <div class="member">
+                <span class="name">Alex Müller</span> – <span class="role">Founder & CEO</span>
+            </div>
+            <div class="member">
+                <span class="name">Sophie Becker</span> – <span class="role">Travel Expert</span>
+            </div>
+            <div class="member">
+                <span class="name">Liam Schneider</span> – <span class="role">Web Developer</span>
+            </div>
+            <div class="member">
+                <span class="name">Mia Fischer</span> – <span class="role">Content Manager</span>
+            </div>
+        </div>
+    </div>
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>

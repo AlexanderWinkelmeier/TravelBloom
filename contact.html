@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - Travel Bloom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+      body {
+        background: url('images/background.jpg') no-repeat center center;
+        background-size: cover;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 500px;
+        margin: 60px auto;
+        background: rgba(255,255,255,0.3);
+        padding: 32px 36px;
+        border-radius: 10px;
+        box-shadow: none;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 28px;
+      }
+      .container form {
+        margin-top: 10px;
+      }
+      .container label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+        color: #222;
+      }
+      .container input[type="text"], 
+      .container input[type="email"], 
+      .container textarea {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 18px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1em;
+        background: #f7f9fa;
+        transition: border 0.2s;
+      }
+      .container input[type="text"]:focus, 
+      .container input[type="email"]:focus, 
+      .container textarea:focus {
+        border: 1.5px solid #0077cc;
+        background: #fff;
+        outline: none;
+      }
+      .container textarea {
+        min-height: 100px;
+        resize: vertical;
+      }
+      .container button[type="submit"] {
+        background: #0077cc;
+        color: #fff;
+        border: none;
+        padding: 12px 0;
+        border-radius: 6px;
+        font-size: 1em;
+        cursor: pointer;
+        margin-top: 8px;
+        width: 100%;
+        transition: background 0.2s;
+        letter-spacing: 1px;
+        font-weight: bold;
+        min-width: 180px;
+      }
+      .container button[type="submit"]:hover {
+        background: #005fa3;
+      }
+      .logo {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+        filter: brightness(0) invert(1);
+      }
+      .nav-company {
+        color: #fff;
+        font-style: italic;
+        font-size: 1.5em;
+        letter-spacing: 1px;
+        margin-left: 10px;
+      }
+      .side-social-icons {
+        position: fixed;
+        top: 70vh;
+        left: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        z-index: 1000;
+      }
+      .side-social-icons a {
+        color: #fff;
+        font-size: 2.1em;
+        transition: color 0.2s;
+        text-decoration: none;
+      }
+      .side-social-icons a:hover {
+        color: #4da6ff;
+      }
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <img src="images/airplane.png" alt="Travel Bloom Logo" class="logo" />
+      <span class="nav-company">TravelBloom</span>
+    </div>
+    <div class="nav-center">
+      <a href="home.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="nav-right">
+      <form class="search-form">
+        <span class="search-icon"><i class="fas fa-search"></i></span>
+        <input type="text" placeholder="Enter a destination or a keyword" name="search" />
+        <button type="submit">Search</button>
+        <button type="reset">Reset</button>
+      </form>
+    </div>
+  </nav>
+  <div class="side-social-icons">
+      <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
+    <div class="container">
+        <h1>CONTACT US</h1>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>
