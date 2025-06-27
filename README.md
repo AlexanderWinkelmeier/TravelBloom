@@ -22,7 +22,7 @@ A JavaScript learning project from the IBM JavaScript Programming Essentials cou
 - **Search Functionality**: Implementation of search logic for various keywords like "country", "beach", "temple"
 - **Regular Expressions**: Recognition of search term variations (plurals, partial words)
 
-## ✨ Funktionen
+## ✨ Functions
 
 ### Search Functionality
 - Input keywords related to travel destinations
