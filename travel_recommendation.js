@@ -22,10 +22,16 @@ document.addEventListener('DOMContentLoaded', function () {
     resultsDiv.style.color = '#222';
     resultsDiv.style.padding = '18px 22px';
     resultsDiv.style.borderRadius = '10px';
-    resultsDiv.style.marginTop = '10px';
+    resultsDiv.style.marginTop = '0';
     resultsDiv.style.display = 'none';
     resultsDiv.style.maxWidth = '350px';
     resultsDiv.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+    resultsDiv.style.position = 'absolute';
+    resultsDiv.style.top = '70px'; // Passe ggf. an die Höhe deiner NavBar an
+    resultsDiv.style.right = '40px';
+    resultsDiv.style.zIndex = '200';
+    resultsDiv.style.maxHeight = '60vh';
+    resultsDiv.style.overflowY = 'auto';
     const navRight = document.querySelector('.nav-right');
     if (navRight) navRight.appendChild(resultsDiv);
     else document.body.appendChild(resultsDiv);
@@ -43,6 +49,11 @@ document.addEventListener('DOMContentLoaded', function () {
       results = (travelData.beaches || []).slice(0, 2);
     } else if (keyword === 'temple' || keyword === 'temples') {
       results = (travelData.temples || []).slice(0, 2);
+    } else if (keyword === 'city' || keyword === 'cities') {
+      // Alle Städte aus allen Ländern zusammenführen (ohne slice)
+      results = (travelData.countries || []).flatMap(
+        (country) => country.cities || []
+      );
     } else {
       let country = (travelData.countries || []).find(
         (c) => c.name.toLowerCase() === keyword
@@ -66,35 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function showResults(results, resultsDiv) {
-  if (!resultsDiv.parentElement.classList.contains('results-wrapper')) {
-    let wrapper = document.querySelector('.results-wrapper');
-    if (!wrapper) {
-      wrapper = document.createElement('div');
-      wrapper.className = 'results-wrapper';
-      wrapper.style.display = 'flex';
-      wrapper.style.flexDirection = 'row';
-      wrapper.style.justifyContent = 'flex-end';
-      wrapper.style.alignItems = 'flex-start';
-      const nav = document.querySelector('nav');
-      if (nav && nav.nextSibling) {
-        nav.parentNode.insertBefore(wrapper, nav.nextSibling);
-      } else if (nav) {
-        nav.parentNode.appendChild(wrapper);
-      }
-    }
-    wrapper.appendChild(resultsDiv);
-    resultsDiv.style.margin = '32px 40px 0 0';
-    resultsDiv.style.position = 'relative';
-    resultsDiv.style.background = 'transparent';
-    resultsDiv.style.boxShadow = 'none';
-    resultsDiv.style.padding = '0';
-    resultsDiv.style.maxWidth = 'none';
-    resultsDiv.style.width = 'auto';
-    resultsDiv.style.right = '0';
-    resultsDiv.style.left = 'auto';
-    resultsDiv.style.borderRadius = '0';
-  }
-
+  // Entferne die Wrapper-Logik, damit das Ergebnisfeld an Ort und Stelle bleibt
   resultsDiv.innerHTML = '';
   resultsDiv.style.display = 'block';
   if (!results.length) {
@@ -108,6 +91,8 @@ function showResults(results, resultsDiv) {
   cardsContainer.style.alignItems = 'flex-end';
   cardsContainer.style.width = '100%';
   cardsContainer.style.background = 'transparent';
+  cardsContainer.style.maxHeight = '60vh';
+  cardsContainer.style.overflowY = 'auto';
 
   results.forEach((item) => {
     const card = document.createElement('div');
@@ -163,11 +148,25 @@ function clearResults(resultsDiv) {
   resultsDiv.innerHTML = '';
   resultsDiv.style.display = 'none';
 }
+desc.style.fontSize = '0.97em';
+desc.style.textAlign = 'left';
+
+card.appendChild(img);
+card.appendChild(title);
+card.appendChild(desc);
 
 cardsContainer.appendChild(card);
 
 resultsDiv.appendChild(cardsContainer);
 
+resultsDiv.style.display = 'block';
+resultsDiv.style.flexDirection = '';
+resultsDiv.style.alignItems = '';
+
+function clearResults(resultsDiv) {
+  resultsDiv.innerHTML = '';
+  resultsDiv.style.display = 'none';
+}
 resultsDiv.style.display = 'block';
 resultsDiv.style.flexDirection = '';
 resultsDiv.style.alignItems = '';
